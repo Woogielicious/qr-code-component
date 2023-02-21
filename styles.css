@@ -1,14 +1,63 @@
+/* ------------------ CSS RESET ----------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 93.75%;
+}
+
+body {
+  margin: 0 auto;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ------------------ CSS RESET ----------------- */
+
 body {
   margin: 0;
   padding: 0;
   width: auto;
+  min-height: 100vh;
   display: flex;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   background-color: hsl(212, 45%, 89%);
   font-family: "Outfit", sans-serif;
+  font-size: 0.9375rem;
 }
 
-section {
+main {
   width: 1440px;
   height: 800px;
   display: flex;
@@ -16,7 +65,7 @@ section {
 }
 
 @media (max-width: 400px) {
-  section {
+  main {
     width: 375px;
     height: auto;
     display: flex;
@@ -29,18 +78,16 @@ section {
   display: flex;
   flex-direction: column;
   align-self: center;
-  width: 300px;
+  max-width: 320px;
   text-align: center;
-  padding: 15px 10px 10px;
+  padding: 16px 16px 40px;
   border-radius: 20px;
 }
 
 h1 {
-  margin: 20px 20px 25px;
+  margin: 25px 20px 16px;
   color: hsl(218, 44%, 22%);
-  font-size: 1.35rem;
-  margin-bottom: 14px;
-  letter-spacing: 0.2px;
+  font-size: 1.45rem;
 }
 
 p {
@@ -52,7 +99,7 @@ p {
 
 .qr-code-image {
   border-radius: 10px;
-  width: 288px;
+  max-width: 100%;
 }
 
 .attribution {
